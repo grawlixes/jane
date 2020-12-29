@@ -2,10 +2,10 @@
 run: clean main 
 
 main: main.o
-	g++ -O4 -fopenmp main.o -o main -ldl
+	g++ -std=c++11 -O4 main.o -o main
 
 main.o:
-	g++ -O4 -lrt -fopenmp -Wall -Wextra -pedantic -c main.cpp
+	g++ -std=c++11 -O4 -Wall -Wextra -pedantic -c main.cpp
 
 # Cleans object and binary files
 clean:
