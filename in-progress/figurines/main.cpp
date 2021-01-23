@@ -97,7 +97,6 @@ double p(vector<int> const &N,
     int F = N.size() + 1;
     int tot = (F * (F + 1)) / 2;
     double selectFirstHere = (double) 1 / (tot - s);
-    //cout << "in func " << ret << ' ' << s << ' ' << totalCache[s] << ' ' << selectFirstHere << endl;
     return ((double) ret / totalCache[s]) * selectFirstHere;
 }
 
@@ -118,14 +117,8 @@ int main() {
                 config[l-2] = M;
                 double res = p(config, ncrCache, totalCache);
                 e += res * M;
-                //cout << "at l " << M << ' ' << res << endl;
                 
                 while (true) {
-                    /*
-                    for (auto n: config) {
-                        cout << n << ' ';
-                    }cout << endl;
-                    */
                     int i = 0;
                     bool found = false;
                     while (i < F - 1) {
@@ -150,7 +143,7 @@ int main() {
                     } else {
                         break;
                     }
-                }//cout<<endl;
+                }
             }
         }
 
